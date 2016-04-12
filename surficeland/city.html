@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta name="viewport" content="initial-scale=1">
+	<meta charset="UTF-8">
+	<title>Surf Iceland | 2014</title>
+	<link href="css/style.css" rel="stylesheet">
+	<link href="css/popup.css" rel="stylesheet">
+	<link href="css/tooltip.css" rel="stylesheet">
+	
+	<link rel="shortcut icon" href="img/favicon.ico" >	
+	
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	
+	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyASm3CwaK9qtcZEWYa-iQwHaGi3gcosAJc&amp;sensor=false"></script>
+	
+        
+        <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyASm3CwaK9qtcZEWYa-iQwHaGi3gcosAJc&amp;sensor=false"></script>
+        
+        <script type="text/javascript">
+            // When the window has finished loading create our google map below
+            google.maps.event.addDomListener(window, 'load', init);
+        
+            function init() {
+                // Basic options for a simple Google Map
+                // For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
+                var mapOptions = {
+                    zoom: 11,					
+                    center: new google.maps.LatLng(64.1219548, -21.8723526),
+					scrollwheel: false,
+                    // How you would like to style the map. 
+                    // This is where you would paste any style found on Snazzy Maps.
+                    styles: [{"elementType":"labels.text","stylers":[{"visibility":"off"}]},{"featureType":"landscape.natural","elementType":"geometry.fill","stylers":[{"color":"#f5f5f2"},{"visibility":"on"}]},{"featureType":"administrative","stylers":[{"visibility":"off"}]},{"featureType":"transit","stylers":[{"visibility":"off"}]},{"featureType":"poi.attraction","stylers":[{"visibility":"off"}]},{"featureType":"landscape.man_made","elementType":"geometry.fill","stylers":[{"color":"#ffffff"},{"visibility":"on"}]},{"featureType":"poi.business","stylers":[{"visibility":"off"}]},{"featureType":"poi.medical","stylers":[{"visibility":"off"}]},{"featureType":"poi.place_of_worship","stylers":[{"visibility":"off"}]},{"featureType":"poi.school","stylers":[{"visibility":"off"}]},{"featureType":"poi.sports_complex","stylers":[{"visibility":"off"}]},{"featureType":"road.highway","elementType":"geometry","stylers":[{"color":"#ffffff"},{"visibility":"simplified"}]},{"featureType":"road.arterial","stylers":[{"visibility":"simplified"},{"color":"#ffffff"}]},{"featureType":"road.highway","elementType":"labels.icon","stylers":[{"color":"#ffffff"},{"visibility":"off"}]},{"featureType":"road.highway","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"road.arterial","stylers":[{"color":"#ffffff"}]},{"featureType":"road.local","stylers":[{"color":"#ffffff"}]},{"featureType":"poi.park","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"poi","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"water","stylers":[{"color":"#3B9C9C"}]},{"featureType":"landscape","stylers":[{"color":"#e5e8e7"}]},{"featureType":"poi.park","stylers":[{"color":"#8ba129"}]},{"featureType":"road","stylers":[{"color":"#ffffff"}]},{"featureType":"poi.sports_complex","elementType":"geometry","stylers":[{"color":"#c7c7c7"},{"visibility":"off"}]},{"featureType":"water","stylers":[{"color":"#a0d3d3"}]},{"featureType":"poi.park","stylers":[{"color":"#91b65d"}]},{"featureType":"poi.park","stylers":[{"gamma":1.51}]},{"featureType":"road.local","stylers":[{"visibility":"off"}]},{"featureType":"road.local","elementType":"geometry","stylers":[{"visibility":"on"}]},{"featureType":"poi.government","elementType":"geometry","stylers":[{"visibility":"off"}]},{"featureType":"landscape","stylers":[{"visibility":"off"}]},{"featureType":"road","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"road.arterial","elementType":"geometry","stylers":[{"visibility":"simplified"}]},{"featureType":"road.local","stylers":[{"visibility":"simplified"}]},{"featureType":"road"},{"featureType":"road"},{},{"featureType":"road.highway"}]
+                };
+
+                // Get the HTML DOM element that will contain your map 
+                // We are using a div with id="map" seen below in the <body>
+                var mapElement = document.getElementById('map');
+
+                // Create the Google Map using out element and options defined above
+                var map = new google.maps.Map(mapElement, mapOptions);
+				
+				
+				var myLatlng = new google.maps.LatLng(64.1219548,-21.8723526);
+				var marker = new google.maps.Marker({
+				position: myLatlng,
+				map: map,
+				title:"Number 10 Gauntland, click for more details."
+				});
+				
+				
+				var myLatlng2 = new google.maps.LatLng(64.1441231,-21.8582657);
+				var marker2 = new google.maps.Marker({
+				position: myLatlng2,
+				map: map,
+				title:"104 Langholtsvegur, click for more details."
+				});				
+
+				var myLatlng3 = new google.maps.LatLng(64.1430294,-21.9073448);
+				var marker3 = new google.maps.Marker({
+				position: myLatlng3,
+				url: 'http://www.google.com',
+				map: map,
+				title:"17 Höfðatún Austurbær, click for more details."
+				});					
+
+				var myLatlng4 = new google.maps.LatLng(64.1383337,-21.9585979);
+				var marker4 = new google.maps.Marker({
+				position: myLatlng4,
+				map: map,
+				title:"75 Fálkagata click for more details."
+				});
+
+				var myLatlng5 = new google.maps.LatLng(64.134765,-21.9170237);
+				var marker5 = new google.maps.Marker({
+				position: myLatlng5,
+				map: map,
+				title:"44 Engihlíð Austurbær, click for more details."
+				});
+				
+			google.maps.event.addListener(marker, 'click', function () {
+			window.location.href = '#house1';
+			});	
+
+			google.maps.event.addListener(marker2, 'click', function () {
+			window.location.href = '#house2';
+			});			
+			
+			google.maps.event.addListener(marker3, 'click', function () {
+			window.location.href = '#house3';
+			});
+			
+			google.maps.event.addListener(marker4, 'click', function () {
+			window.location.href = '#house4';
+			});			
+			
+			
+			google.maps.event.addListener(marker5, 'click', function () {
+			window.location.href = '#house5';
+			});		
+			
+			
+			}
+			
+        </script>	
+	
+</head>
+
+<body>
+	<nav>
+		<a href="index.html"><img class="logo" alt="Logo" src="img/logo2.png"></a>
+		
+		<span class= "navbar-button"></span>
+		<ul class="navbar">
+
+			<li><a href="index.html" title="Home">Home</a></li>
+	       	<li><a href="gallery.html" title="Gallery">Gallery</a></li>
+			<li class= "active"><a href="match.html" title="Match" id="matchbutton">Match</a>
+				<ul>
+               		<li><a href="city.html" title="City Locations">City</a></li>
+                	<li><a href="coast.html" title="Coastal Locations">Coastal</a></li>
+                	<li><a href="rural.html" title="Rural Locations">Rural</a></li>
+            	</ul>
+            </li>
+ 		</ul>
+	</nav>
+
+
+	<img class="mainimg" alt="Reykjavik city at night" src="img/match.jpg">
+
+
+	<div class="topbar">
+		<div class="section1">
+
+			<h1>City Location</h1>
+
+			<p>So you're one of those types huh? Well on this page you will find all of our city listings in Reykjavik. Use the plotted points on the map located on the right to find the best location for you.<p>
+			<p>Alternatively, if you couldn't care where in the city you are located just scroll down to look at our full listings.</p>
+		</div>
+	
+		
+	
+		<div class="sectionmap">
+		
+			<div id="map"></div>
+			
+		</div>
+		
+		<div class="weather">
+			<iframe id="forecast_embed" type="text/html" frameborder="0" height="245" width="100%" src="http://forecast.io/embed/#lat=64.1383337&amp;lon=-21.9585979&amp;name=Reykjavik City"></iframe>
+		</div>
+		
+	</div>
+	
+	
+	<div id="popupform">
+	<!-- Popup Div Starts Here -->
+		<div id="popupContact">
+		<!-- Contact Us Form -->
+			<form action="#" id="form" method="post" name="form">
+			<img id="close" alt="cancel" src="img/icons/cancel.png" onclick ="div_hide()">
+		<h4>Contact This Host</h4>
+		<hr>
+<input id="name" name="name" placeholder="Full Name" type="text">
+<input id="email" name="email" placeholder="Email" type="text">
+<textarea id="msg" name="message" placeholder="Message"></textarea>
+
+<a href="javascript:%20check_empty()" id="submit">Send</a>
+
+</form>
+
+</div>
+<!-- Popup Div Ends Here -->
+</div>
+<!-- Display Popup Button -->
+
+	<div class="topbar3" id="house1">
+		<div class="housebar">
+			<a href="" class="tooltip">
+    		    <img class="houseimg" alt="house image" src="img/houses/1.jpg">
+    		<span>
+        		<img class="callout" alt="callout" src="img/icons/callout_black.gif"/>
+        		<img class= "hostimg" src="img/host1.jpg" alt="host" style="float:right;"/>
+        		<strong>Number 10 Gauntland</strong><br />
+        		The four bedroomed house is owned by Alvilda Lindberg, located just south of the city, this is perfect for the city goer who isn't a huge fan of the vibrant cities.
+    		</span>
+			</a>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eu orci quam. Vivamus posuere est a sollicitudin ultrices. Aliquam rutrum scelerisque arcu vitae pellentesque. Donec leo tortor, varius eu dui sed, malesuada congue odio. Mauris eget dolor id orci suscipit hendrerit quis a turpis. Cras malesuada ligula sed finibus pulvinar.</p>
+			<p>Hover over the image for more details</p>
+			<button class="popup" onclick="div_show()">Contact</button>
+			
+		</div>	
+	</div>	
+
+	<div class="topbar3" id="house2">
+		<div class="housebar">
+			<a href="" class="tooltip">
+    		    <img class="houseimg" alt="house image" src="img/houses/2.jpg">
+    		<span>
+        		<img class="callout" alt="callout" src="img/icons/callout_black.gif" />
+        		<img class= "hostimg" src="img/host2.jpg" alt="host" style="float:right;" />
+        		<strong>104 Langholtsvegur</strong><br/>
+        		Located mearly feet from the Kleppsspítali hospital, this two bedroomed location is best for the thrill seeker.
+    		</span>
+    		</a>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eu orci quam. Vivamus posuere est a sollicitudin ultrices. Aliquam rutrum scelerisque arcu vitae pellentesque. Donec leo tortor, varius eu dui sed, malesuada congue odio. Mauris eget dolor id orci suscipit hendrerit quis a turpis. Cras malesuada ligula sed finibus pulvinar.</p>
+			<p>Hover over the image for more details</p>
+			<button class="popup" onclick="div_show()">Contact</button>
+		</div>	
+	</div>	
+	
+	<div class="topbar3" id="house3">
+		<div class="housebar">
+			<a href="" class="tooltip">
+    		    <img class="houseimg" alt="house image" src="img/houses/3.jpg">
+    		<span>
+        		<img class="callout" alt="callout" src="img/icons/callout_black.gif" />
+        		<img class ="hostimg" src="img/host3.jpg" alt="host" style="float:right;" />
+        		<strong>17 Höfðatún Austurbær</strong><br/>
+        		If you're a city person, this is the one for you. Pretty much inside the heart of the city, you'll be out so much you won't mind Andríður's 15 cats laying teeny tiny turds in your rucksack.
+    		</span>
+    		</a>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eu orci quam. Vivamus posuere est a sollicitudin ultrices. Aliquam rutrum scelerisque arcu vitae pellentesque. Donec leo tortor, varius eu dui sed, malesuada congue odio. Mauris eget dolor id orci suscipit hendrerit quis a turpis. Cras malesuada ligula sed finibus pulvinar.</p>
+			<p>Hover over the image for more details</p>
+			<button class="popup" onclick="div_show()">Contact</button>
+		</div>	
+	</div>	
+	
+	<div class="topbar3" id="house4">
+		<div class="housebar">
+			<a href="" class="tooltip">
+    		    <img class="houseimg" alt="house image" src="img/houses/4.jpg">
+    		<span>
+        		<img class="callout" alt="callout" src="img/icons/callout_black.gif" />
+        		<img class ="hostimg" src="img/host4.jpg" alt="host" style="float:right;" />
+        		<strong>75 Fálkagata</strong><br/>
+        		A little bit closer to the harbour than the rest of the accomadation. This place is ideal for the "I just can't go 2 hours without smelling the totally amazing briney aroma of the sea", but if you talk like this, the owner may not like you.
+    		</span>
+    		</a>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eu orci quam. Vivamus posuere est a sollicitudin ultrices. Aliquam rutrum scelerisque arcu vitae pellentesque. Donec leo tortor, varius eu dui sed, malesuada congue odio. Mauris eget dolor id orci suscipit hendrerit quis a turpis. Cras malesuada ligula sed finibus pulvinar.</p>
+			<p>Hover over the image for more details</p>
+			<button class="popup" onclick="div_show()">Contact</button>
+		</div>	
+	</div>	
+	
+	<div class="topbar3" id="house5">
+		<div class="housebar">
+			<a href="" class="tooltip">
+    		    <img class="houseimg" alt="house image" src="img/houses/5.jpg">
+    		<span>
+        		<img class="callout" alt="callout" src="img/icons/callout_black.gif" />
+        		<img class= "hostimg" src="img/host5.jpg" alt="host" style="float:right;" />
+        		<strong>44 Engihlíð Austurbær</strong><br/>
+        		If you're not a fan of too much grey, there's two seperate parks not too far from you. This house is also located right next to our world famous stadium Vodafonevöllurinn. 
+    		</span>
+    		</a>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eu orci quam. Vivamus posuere est a sollicitudin ultrices. Aliquam rutrum scelerisque arcu vitae pellentesque. Donec leo tortor, varius eu dui sed, malesuada congue odio. Mauris eget dolor id orci suscipit hendrerit quis a turpis. Cras malesuada ligula sed finibus pulvinar.</p>
+			<p>Hover over the image for more details</p>
+			<button class="popup" onclick="div_show()">Contact</button>
+		</div>	
+	</div>	
+	
+
+	
+<footer>
+
+	<div class="footercontainer">
+		<div class="footcol">
+			<h3>Site</h3>
+			<ul>
+				<li><a href="index.html" title="Home">Home</a></li>
+				<li><a href="gallery.html" title="Gallery">Gallery</a></li>
+				<li><a href="match.html" title="Match">Match</a></li>
+				<li><a href="city.html" title="City">City</a></li>
+				<li><a href="map.jpg">HTML Map</a></li>
+				<li><a href="../report1/Sam Ager- Reflective Report.docx">Report</a></li>				
+			</ul>
+		</div>
+
+
+
+		<div class="footcontact">
+			<h3>Contact Us</h3>
+				<form>
+					<input type="text" name="name" class="name" placeholder="Name">
+					<br>
+					<input type="text" name="email" class="email" placeholder="Email">
+					<br>
+					<textarea name="message" placeholder="Message"></textarea>
+					<br>
+					<button type="submit">Submit</button>
+				</form>
+		</div>
+
+
+		<div class="foothcard">
+			<h3>Surf Iceland</h3>
+
+			<div id="vcarddiv" class="vcard">
+ 				<span class="fn n">
+    				<span class="given-name"></span>
+  					<span class="additional-name"></span>
+  					<span class="family-name"></span>
+				</span>
+				 	<div class="org">Surf Iceland</div>				 	
+				 	<div class="adr">
+				  	<div class="street-address">Lindargata</div>
+			 	<span class="locality">Reykjavík</span>
+
+				  <span class="country-name">Iceland</span>
+ 			</div>
+ 			<p></p>
+ 				<div class="tel">+354 867 8147</div>
+ 				<a class="email" href="mailto:enquires@si.com">enquires@si.com</a>			
+
+		</div>
+	</div>
+
+	</div>
+
+		<div class="divider"></div>
+
+
+		<div class="social">
+		
+			<div class="icons">	
+				<a href="https://www.facebook.com/sharer/sharer.php?u=http://www.cems.uwe.ac.uk/~s2-ager/wdp/project1/index.html"><img src="img/icons/facebook.png" alt="facebook icon"></a>
+				<a href="https://twitter.com/home?status=http://www.cems.uwe.ac.uk/~s2-ager/wdp/project1/index.html"><img src="img/icons/twitter.png" alt="twitter icon"></a>
+				<a href="https://plus.google.com/share?url=http://www.cems.uwe.ac.uk/~s2-ager/wdp/project1/index.html"><img src="img/icons/google+.png" alt="google+ icon"></a>
+				<a href="mailto:?subject=Hey Look At This Arctic Surfing Site&amp;body=I think this website definitely deserves a first http://www.cems.uwe.ac.uk/~s2-ager/wdp/project1/index.html" title="Share by Email"><img src="img/icons/email.png" alt="mail icon"></a>
+			</div>
+		</div>
+
+</footer>
+
+<script src="js/java.js"></script>
+
+</body>
+
+</html>

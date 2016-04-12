@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta name="viewport" content="initial-scale=1">
+	<meta charset="UTF-8">
+	<title>Surf Iceland | 2014</title>
+	<link href="css/style.css" rel="stylesheet">
+	<link rel="shortcut icon" href="img/favicon.ico" >
+	
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	
+	        <style type="text/css">
+            /* Set a size for our map container, the Google Map will take up 100% of this container */
+            #map {
+                width: 90%;
+                height: 500px;
+            }
+        </style>
+	
+	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyASm3CwaK9qtcZEWYa-iQwHaGi3gcosAJc&amp;sensor=false"></script>
+	
+        
+        <!-- 
+            You need to include this script on any page that has a Google Map.
+            When using Google Maps on your own site you MUST signup for your own API key at:
+                https://developers.google.com/maps/documentation/javascript/tutorial#api_key
+            After your sign up replace the key in the URL below or paste in the new script tag that Google provides.
+        -->
+        <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyASm3CwaK9qtcZEWYa-iQwHaGi3gcosAJc&amp;sensor=false"></script>
+        
+        <script type="text/javascript">
+
+            google.maps.event.addDomListener(window, 'load', init);
+        
+            function init() {
+
+                var mapOptions = {
+
+                    zoom: 6,
+					scrollwheel: false,
+
+                    center: new google.maps.LatLng(64.856195, -18.654388),
+
+
+                    styles: [{"elementType":"labels.text","stylers":[{"visibility":"off"}]},{"featureType":"landscape.natural","elementType":"geometry.fill","stylers":[{"color":"#f5f5f2"},{"visibility":"on"}]},{"featureType":"administrative","stylers":[{"visibility":"off"}]},{"featureType":"transit","stylers":[{"visibility":"off"}]},{"featureType":"poi.attraction","stylers":[{"visibility":"off"}]},{"featureType":"landscape.man_made","elementType":"geometry.fill","stylers":[{"color":"#ffffff"},{"visibility":"on"}]},{"featureType":"poi.business","stylers":[{"visibility":"off"}]},{"featureType":"poi.medical","stylers":[{"visibility":"off"}]},{"featureType":"poi.place_of_worship","stylers":[{"visibility":"off"}]},{"featureType":"poi.school","stylers":[{"visibility":"off"}]},{"featureType":"poi.sports_complex","stylers":[{"visibility":"off"}]},{"featureType":"road.highway","elementType":"geometry","stylers":[{"color":"#ffffff"},{"visibility":"simplified"}]},{"featureType":"road.arterial","stylers":[{"visibility":"simplified"},{"color":"#ffffff"}]},{"featureType":"road.highway","elementType":"labels.icon","stylers":[{"color":"#ffffff"},{"visibility":"off"}]},{"featureType":"road.highway","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"road.arterial","stylers":[{"color":"#ffffff"}]},{"featureType":"road.local","stylers":[{"color":"#ffffff"}]},{"featureType":"poi.park","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"poi","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"water","stylers":[{"color":"#3B9C9C"}]},{"featureType":"landscape","stylers":[{"color":"#e5e8e7"}]},{"featureType":"poi.park","stylers":[{"color":"#8ba129"}]},{"featureType":"road","stylers":[{"color":"#ffffff"}]},{"featureType":"poi.sports_complex","elementType":"geometry","stylers":[{"color":"#c7c7c7"},{"visibility":"off"}]},{"featureType":"water","stylers":[{"color":"#a0d3d3"}]},{"featureType":"poi.park","stylers":[{"color":"#91b65d"}]},{"featureType":"poi.park","stylers":[{"gamma":1.51}]},{"featureType":"road.local","stylers":[{"visibility":"off"}]},{"featureType":"road.local","elementType":"geometry","stylers":[{"visibility":"on"}]},{"featureType":"poi.government","elementType":"geometry","stylers":[{"visibility":"off"}]},{"featureType":"landscape","stylers":[{"visibility":"off"}]},{"featureType":"road","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"road.arterial","elementType":"geometry","stylers":[{"visibility":"simplified"}]},{"featureType":"road.local","stylers":[{"visibility":"simplified"}]},{"featureType":"road"},{"featureType":"road"},{},{"featureType":"road.highway"}]
+                };
+
+                // Get the HTML DOM element that will contain your map 
+                // We are using a div with id="map" seen below in the <body>
+                var mapElement = document.getElementById('map');
+
+                // Create the Google Map using out element and options defined above
+                var map = new google.maps.Map(mapElement, mapOptions);
+				
+			
+			}
+        </script>
+	
+	
+</head>
+
+<body>
+<div id="main">	
+
+	<nav>
+		<a href="index.html"><img class="logo" alt="Logo" src="img/logo2.png"></a>
+		
+		<span class= "navbar-button"></span>
+		<ul class="navbar">
+
+			<li><a href="index.html" title="Home">Home</a></li>
+	       	<li><a href="gallery.html" title="Gallery">Gallery</a></li>
+			<li class= "active"><a href="match.html" title="Match" id="matchbutton">Match</a>
+				<ul>
+               		<li><a href="city.html" title="City Locations">City</a></li>
+                	<li><a href="coast.html" title="Coastal Locations">Coastal</a></li>
+                	<li><a href="rural.html" title="Rural Locations">Rural</a></li>
+            	</ul>
+            </li>
+ 		</ul>
+	</nav>
+
+
+	<img class="mainimg" alt="Reykjavik city at night" src="img/match.jpg">
+
+
+
+
+	
+	<div class="topbar">
+		
+		<div class="bit">
+		
+		<div class="matchsection1">
+
+			<h1>City</h1>
+			
+				<p>If you're here to not only experience our world famous waves but to experience our architecture, nightlife and women, then the city is the best place for you. With hosts located all around our capital you'll find it hard not to wake up surrounded by an assortment of strange meats and Skallagrímur, our local mime .<p>
+				<form action="city.html"><button class="popup">></button></form>
+	
+		</div>
+		
+		
+		<div class="matchsection1">
+
+			<h1>Rural</h1>
+			
+				<p>Farms, farms and more farms. You might even get a glimpse of our mythical tractor. If you're not into the city life and want to stay nearer to the wilderness then our rural locations are perfect. with remote locations ranging from our hot springs to Hjörtþór's fish farm you'll never want to see other people again.<p>
+				<button class="popupdisabled">></button>
+		</div>
+		
+		
+		
+		<div class="matchsection1">
+
+			<h1>Coastal</h1>
+			
+				<p>If you're here to surf and only surf then do we have the best options for you. Scattered across the coast we have properties to suit the types who kind of like the inner city but can't stay too far from water otherwise they will have a mental breakdown, to the secluded hermit types who prefer life without WiFi than people. <p>
+				<button class="popupdisabled">></button>
+		</div>	
+		
+		</div>
+		
+		
+	</div>
+	
+
+
+
+
+<footer>
+
+	<div class="footercontainer">
+		<div class="footcol">
+			<h3>Site</h3>
+			<ul>
+				<li><a href="index.html" title="Home">Home</a></li>
+				<li><a href="gallery.html" title="Gallery">Gallery</a></li>
+				<li><a href="match.html" title="Match">Match</a></li>
+				<li><a href="city.html" title="City">City</a></li>
+				<li><a href="map.jpg">HTML Map</a></li>
+				<li><a href="../report1/Sam Ager- Reflective Report.docx">Report</a></li>
+			</ul>
+		</div>
+
+
+
+		<div class="footcontact">
+			<h3>Contact Us</h3>
+				<form>
+					<input type="text" name="name" class="name" placeholder="Name">
+					<br>
+					<input type="text" name="email" class="email" placeholder="Email">
+					<br>
+					<textarea name="message" placeholder="Message"></textarea>
+					<br>
+					<button type="submit">Submit</button>
+				</form>
+		</div>
+
+
+		<div class="foothcard">
+			<h3>Surf Iceland</h3>
+
+			<div id="vcarddiv" class="vcard">
+ 				<span class="fn n">
+    				<span class="given-name"></span>
+  					<span class="additional-name"></span>
+  					<span class="family-name"></span>
+				</span>
+				 	<div class="org">Surf Iceland</div>				 	
+				 	<div class="adr">
+				  	<div class="street-address">Lindargata</div>
+			 	<span class="locality">Reykjavík</span>
+
+				  <span class="country-name">Iceland</span>
+ 			</div>
+ 			<p></p>
+ 				<div class="tel">+354 867 8147</div>
+ 				<a class="email" href="mailto:enquires@si.com">enquires@si.com</a>			
+
+		</div>
+	</div>
+
+	</div>
+
+		<div class="divider"></div>
+
+
+		<div class="social">
+		
+			<div class="icons">	
+				<a href="https://www.facebook.com/sharer/sharer.php?u=http://www.cems.uwe.ac.uk/~s2-ager/wdp/project1/index.html"><img src="img/icons/facebook.png" alt="facebook icon"></a>
+				<a href="https://twitter.com/home?status=http://www.cems.uwe.ac.uk/~s2-ager/wdp/project1/index.html"><img src="img/icons/twitter.png" alt="twitter icon"></a>
+				<a href="https://plus.google.com/share?url=http://www.cems.uwe.ac.uk/~s2-ager/wdp/project1/index.html"><img src="img/icons/google+.png" alt="google+ icon"></a>
+				<a href="mailto:?subject=Hey Look At This Arctic Surfing Site&amp;body=I think this website definitely deserves a first http://www.cems.uwe.ac.uk/~s2-ager/wdp/project1/index.html" title="Share by Email"><img src="img/icons/email.png" alt="mail icon"></a>
+			</div>
+		</div>
+
+</footer>
+
+<script src="js/java.js"></script>
+
+</div>
+</body>
+
+</html>

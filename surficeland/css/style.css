@@ -1,0 +1,728 @@
+
+@font-face {
+    font-family: 'navfont';
+    src: url(../font/main.ttf);
+}
+
+@font-face {
+    font-family: 'bodfont';
+    src: url(../font/bodtext.ttf);
+}
+
+
+body{
+	padding: 0;
+	margin: 0;
+	height:100%;
+	background-color: #fff;
+	font-family: bodfont;
+
+}
+
+.main{
+	overflow: auto;
+  	padding-bottom: 180px;
+
+}
+
+.matchsection1{
+		width: 100%;
+		clear: both;
+		position: relative;
+		float: none;
+	}
+
+body a{
+	text-decoration: none;
+	color: #3B9C9C;
+
+}
+
+body a:hover{
+	text-decoration: underline;
+
+}
+
+
+h1{
+	font-family: 'navfont';
+	font-size: 35px;
+	color: black;
+	padding: 0;
+
+}
+
+h2{
+	font-family: 'navfont';
+	font-size: 27px;
+	color: black;
+}
+
+h3{
+	font-family: 'navfont';
+	font-size: 25px;
+	color: #fff;
+
+}
+
+h4 {
+	background-color:#3B9C9C;
+	padding:20px 35px;
+	margin:-10px -50px;
+	text-align:center;
+	border-radius:10px 10px 0 0;
+	font-size: 30px;
+}
+
+p{
+	font-family: 'bodfont', Helvetica, Arial, sans-serif;
+	font-size: 15px;
+	
+}
+
+/*---------------Navigation---------------*/
+
+nav{
+	position: fixed;
+	width: 100%;
+	font-family: 'navfont';
+	z-index: 1 ;
+
+	
+}
+
+
+.navbar {
+	list-style: none;
+	background-color: #333;
+	opacity: 0.95;
+	margin: 0;
+	text-align: center;
+	margin: 0 -25% 0 0;
+
+	
+}
+
+.navbar > li {
+	position: relative;
+	color: #fff;
+	display: inline-block;
+	padding: 15px 0px;
+
+}
+
+.logo{
+	position: absolute;	
+	height:85%;
+	width: auto;
+	z-index: 2;
+	margin: 0.3% 0 0 8%;
+
+}
+
+.navbar > li:hover {
+	background-color: #585858;
+
+}
+
+.navbar > li > a{
+	text-decoration: none;
+	font-size: 30px;
+	color: #fff;
+	padding: 20px 20px;
+
+}
+
+.navbar > li > ul {
+	position: relative; 
+	display: none;
+	background-color: #585858;
+	margin: 15% 0%;
+	text-align: center;
+	padding: 15px 0%;
+	
+}
+
+.navbar > li > ul > li{
+	list-style: none;
+	padding: 10px 0px;
+
+}
+
+.navbar li > ul > li:hover{
+	background-color: #282828;
+
+}
+
+.navbar > li > ul > li > a{
+	text-decoration: none;
+	font-size: 20px;
+	color: #fff;
+	padding: 10px 80px;
+	margin: 0;
+
+}
+
+
+
+.navbar > li:hover  > ul{
+	position: absolute;
+	display: block;
+}
+
+
+.active{
+	background-color: #585858;
+
+}
+
+
+
+/*---------------Media Query---------------*/
+
+@media (max-width: 800px){
+
+	.navbar {
+		text-align: center;
+		display: none;
+		margin:0;
+		padding:0;
+		opacity: 1;
+		background-color: #282828;
+
+	}
+
+	.navbar > li {
+		display: block;
+		text-align: center;
+
+
+	}
+
+	.navbar > li  > a{
+		display: block;
+		padding: 1% 0;
+		font-size: 27px;
+
+	}	
+
+	.navbar > li:hover  > ul{
+		padding: 0 50%;
+		margin: 0 0 0 -1024px;
+		font-size: 23px;
+
+	}	
+
+	.navbar li > ul > li > a{
+		padding: 10px 1000px;
+
+	}
+	
+	.navbar-button {
+		display: block;
+		background-color: #333;
+		color: #fff;
+		text-align: right;
+		cursor: pointer;
+		padding: 2% 8% 1.75% 0;
+
+	}
+	
+	.active{
+		background-color: #282828;
+
+}
+
+	.navbar-button:before{
+		content: url(../img/toggle2.png);
+
+	}
+
+	
+	.logo{
+		height: 40px;
+		width: auto;
+		z-index: 0;
+		margin: 0.75% 0 0 6%;
+
+	}
+	
+
+	body p {
+		font-size: 12px;
+	}
+
+
+	h1{
+		font-size: 30px;
+
+	}
+
+	
+	.footer > li > a{
+		font-size: 10px;
+	
+	}
+
+	
+	.section1{
+		position: relative;
+		float: left;
+		padding: 0 200px 0 0;
+
+	}
+
+	.section1 p{
+		margin:0 -140% 10px 0;
+	
+	}
+	
+
+	.youtube{
+		width: 205%;
+
+	}
+	
+			
+	.bit{
+		float: left;
+		padding: 0 0 0 0;
+
+	}
+	
+	
+	
+	.section4{
+		margin: 0 0 400px 0;
+		padding: 0 0 40% 0;
+
+	}
+
+	.sectionmap{
+		position: relative;
+		float: left;
+
+	}
+	
+
+	#map{
+		width: 207%;
+	}
+	
+	.matchsection1 p{
+		margin: 0 8% 8% 4%;
+	}
+	
+	.matchsection1 h1{
+		margin: 1% 4% 3% 4%;
+	}
+	
+	.matchsection1 h2{
+		margin: 1% 4% 3% 4%;
+	}
+	
+	.matchsection1 form{
+		margin: 8% 4%;
+	}
+	
+	.houseimg{
+		
+	}
+	
+	.foothcard{
+		display: none;
+	}
+	
+	.footcol{
+		display: none;
+	}
+	
+	.footcontact{
+		display: none;
+	}
+	
+	.social{
+		display: none;
+	}
+	
+	
+	
+	
+}
+	
+	@media (max-width: 600px){
+		.logo{
+			height: 35px;
+		}
+	}
+	
+/*---------------Index---------------*/
+
+.mainimg {
+	width: 100%;
+	margin: 0;
+	z-index: -1;
+
+}
+
+
+.topbar{
+	width: 100%;
+	position: relative;
+	overflow: hidden;
+	padding: 0 0 0 0;
+	margin: 1% 0 2% 0;
+	background-color: #fff;	
+	-webkit-box-shadow: 0px 0px 52px -15px rgba(0,0,0,0.8);
+	-moz-box-shadow: 0px 0px 52px -15px rgba(0,0,0,0.8);
+	box-shadow: 0px 0px 52px -15px rgba(0,0,0,0.8);
+
+}
+
+.topbar2{
+	height: 450px;
+	width: 100%;
+	position: relative;
+	margin: 10px 0 30px 0;
+	background-color: #fff;
+
+}
+
+.topbar3{
+	height: 100%;
+	width: 100%;
+	position: relative;
+	margin: 10px 0 30px 0;
+	background-color: #fff;
+}
+
+.topbar6{
+	width: 100%;
+	position: relative;
+	margin: 10px 0 30px 0;
+	-webkit-box-shadow: 0px 0px 52px -15px rgba(0,0,0,0.8);
+	-moz-box-shadow: 0px 0px 52px -15px rgba(0,0,0,0.8);
+	box-shadow: 0px 0px 52px -15px rgba(0,0,0,0.8);	
+
+}
+
+.section1 {
+	float: left;
+	width: 35%;
+	margin: 20px 0 0 8%;
+	
+}
+
+
+.section2 {
+	float: left;
+	position: relative;
+	width: 40%;
+	margin: 45px 8% 0px 9%;
+
+}
+
+.section3 {
+	float: left;
+	width: 35%;
+	background-color: #fff;
+	margin: 20px 0 0 8%;
+	
+}
+
+.section4 {
+	float: left;
+	position: relative;
+	width: 40%;
+	margin: 55px 8% 0px 9%;
+
+}
+
+.sectionmap {
+	float: left;
+	position: relative;
+	width: 40%;
+	margin: 45px 8% 0px 9%;
+
+}
+
+
+/*---------------Gallery---------------*/
+
+
+.gallery{
+	margin:0 0 10% 0;
+
+}
+
+.gallery h1{
+	padding: 3% 8%;
+
+}
+
+
+.gallrow{
+	margin: 0 8%;
+	padding: 0% 0;
+	display: flex; 
+	flex-flow: row wrap;
+
+}
+
+.gallrow > *{
+	flex: auto; 
+	width: 200px;
+	margin: 0 2px;
+}
+
+.img-responsive {
+	width: 100%; 
+	height: auto;
+
+}
+
+.img-responsive:hover{
+	opacity: 0.7;
+}
+
+/*---------------Match---------------*/
+
+@media (min-width: 801px) {
+	.matchsection1{
+		float: left;
+		display: block;
+		padding: 0 5.5%;
+		margin: 0 0 5% 0;
+		width: 21%;
+		clear: none;
+	}
+}
+
+.bit{
+	padding: 3% 0 0 4%;
+}
+
+.mapbox{
+	position: relative;
+	margin: 0 0 0 8%;
+	padding: 3% 0;
+	
+}
+
+.mapbox2{
+	position: relative;
+	margin: 0 0 0 8%;
+	padding: 3% 0;
+	
+}
+
+#map {
+    height: 300px;
+}
+
+.housebar{
+	position: relative;
+	margin: 10px 8%;
+	padding: 0 0 7% 0;
+	border-bottom: 1px solid;
+	clear: both;
+
+}
+
+.housebar p{
+	padding: 0 0 1% 0;
+
+}
+
+.houseimg{
+	width: 30%;
+	height: auto;
+	margin: 0% 5% 0% 0;
+	position: relative;
+	float: left;
+	
+}
+
+
+.popup{
+	font-family: 'bodfont';
+	width:100px;
+	margin: 15px 0;
+	text-align:center;
+	background-color:#3B9C9C;
+	color:#fff;
+	border:1px solid #585858;
+	padding:5px 0;
+	font-size:15px;
+	border-radius:5px;
+
+}
+
+.popup:hover{
+	cursor: pointer;
+
+}
+
+.popupdisabled{
+	font-family: 'bodfont';
+	text-decoration:line-through;
+	width:100px;
+	margin: 15px 0;
+	text-align:center;
+	background-color:#3B9C9C;
+	color:#fff;
+	border:1px solid #585858;
+	padding:5px 0;
+	font-size:15px;
+	border-radius:5px;
+	opacity: 0.6;
+
+}
+
+.weather{
+	margin: 10% 8% 0 8%;
+	width: 84%;
+
+}
+
+
+/*---------------Footer---------------*/
+
+
+footer{
+	position: relative;
+	width: 100%;
+	background-color: #333;
+	overflow: hidden;
+
+}
+
+
+
+.footercontainer{
+	position: relative;
+	margin: 1% 8% 20% 8%;
+	font-family:'bodfont';
+	color: #fff;
+	font-size: 13px;
+
+}
+
+
+
+.social{
+	position: relative;
+	margin: 0% 30%;
+	text-align: center;
+
+}
+
+
+.footcol{
+	width: 25%;
+	float: left;
+	position: relative;
+	margin: 0;
+	padding: 0 0 0 5px;
+
+}
+
+.footcol ul{
+	padding: 0 0;
+}
+
+.footcol ul li{
+	list-style: none;
+	color: #fff;
+
+}
+
+.footcol li a{
+	color: #fff;
+
+}
+
+.footcontact{
+	width: 40%;
+	float: left;
+	position: relative;
+	margin: 0px 0 0 4%;
+	
+}
+
+.footcontact h3{
+	text-align: center;
+
+}
+
+.footcontact form input{
+	width: 100%;
+	margin: 0 0% 3% 0;
+	font-size: 13px;
+	font-family: 'bodfont';
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	padding: 1% 0;
+
+}
+
+
+.footcontact form textarea{
+	width: 100%;
+	margin: 0 15% 5% 0;
+	font-size: 13px;
+	font-family: 'bodfont';
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	padding: 1% 0.4%;
+
+}
+
+.footcontact form button{
+	font-family: 'bodfont';
+	width:80px;
+	text-align:center;
+	background-color:#3B9C9C;
+	color:#fff;
+	border:1px solid #585858;
+	padding:5px 0;
+	font-size:13px;
+	border-radius:5px
+
+}
+
+
+.footcontact form button:hover{
+	cursor: pointer;
+
+
+}
+
+.foothcard{
+	width: 25%;
+	float: right;
+	position: relative;
+	margin: 0;
+	padding: 0;
+	text-align: right;
+
+}
+
+
+
+.icons img{
+	width: 40px;
+	height: auto;
+	padding: 5% 2%;
+	margin: 15% 0 0 0;
+	opacity: 0.4;
+
+}
+
+.icons img:hover{
+	cursor: pointer;
+  	opacity: 1;
+
+}
